@@ -16,22 +16,22 @@ export function IndustryCard({ slug, title, intro, icon, className }: IndustryCa
     <Link
       href={`/industries/${slug}`}
       className={cn(
-        'group flex flex-col bg-white rounded-xl p-6 shadow-sm border border-gray-100',
-        'hover:shadow-md hover:border-securenext-navy/20 transition-all duration-300',
-        'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-securenext-accent focus-visible:ring-offset-2',
+        'group flex flex-col glass-card p-6 transition-all duration-300',
+        'hover:shadow-lg hover:shadow-securenext-accent/10 hover:border-securenext-accent/40',
+        'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-securenext-accent focus-visible:ring-offset-2 focus-visible:ring-offset-transparent',
         className
       )}
     >
       {icon && (
-        <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-securenext-navy/10 text-securenext-navy group-hover:bg-securenext-navy group-hover:text-white transition-all duration-300">
+        <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-white/10 text-white group-hover:bg-securenext-accent group-hover:text-white transition-all duration-300">
           {icon}
         </div>
       )}
-      <h3 className="text-lg font-semibold text-securenext-navy mb-2 group-hover:text-securenext-accent transition-colors duration-200">
+      <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-securenext-accent transition-colors duration-200">
         {title}
       </h3>
-      <p className="text-sm text-gray-600 leading-relaxed flex-1 line-clamp-3">{intro}</p>
-      <div className="mt-4 flex items-center gap-1 text-sm font-semibold text-securenext-navy group-hover:text-securenext-accent transition-colors">
+      <p className="text-sm text-white/70 leading-relaxed flex-1 line-clamp-3">{intro}</p>
+      <div className="mt-4 flex items-center gap-1 text-sm font-semibold text-white/80 group-hover:text-securenext-accent transition-colors">
         Learn more
         <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true" />
       </div>

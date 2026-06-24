@@ -97,7 +97,7 @@ export function ProcessTimeline() {
                   transition={{ duration: 0.5, delay: 0.15 * index, ease: 'easeOut' }}
                 >
                   {/* Step circle */}
-                  <div className="relative flex h-24 w-24 items-center justify-center rounded-full bg-securenext-navy border-2 border-securenext-accent/40 z-10 mb-6">
+                  <div className="relative flex h-24 w-24 items-center justify-center rounded-full z-10 mb-6" style={{ background: 'rgba(255,255,255,0.08)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', border: '2px solid rgba(29,123,255,0.50)' }}>
                     <div className="flex flex-col items-center gap-1">
                       <step.icon className="h-7 w-7 text-securenext-accent" aria-hidden="true" />
                       <span className="text-xs font-bold text-securenext-accent">{step.number}</span>

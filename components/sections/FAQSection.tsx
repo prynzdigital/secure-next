@@ -40,7 +40,7 @@ export function FAQSection({
 
   return (
     <section
-      className={`py-20 ${dark ? 'bg-securenext-navy-dark' : 'bg-white'}`}
+      className="py-20"
       aria-labelledby={resolvedHeadingId}
     >
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
@@ -54,13 +54,13 @@ export function FAQSection({
           {heading && (
             <h2
               id={resolvedHeadingId}
-              className={`text-3xl sm:text-4xl font-bold ${dark ? 'text-white' : 'text-securenext-navy'}`}
+              className="text-3xl sm:text-4xl font-bold text-white"
             >
               {heading}
             </h2>
           )}
           {subheading && (
-            <p className={`mt-4 text-lg ${dark ? 'text-white/70' : 'text-gray-600'}`}>
+            <p className="mt-4 text-lg text-white/70">
               {subheading}
             </p>
           )}
@@ -77,15 +77,13 @@ export function FAQSection({
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className={dark ? 'border-white/20 last:border-0' : ''}
+                className="border-white/15 last:border-0"
               >
-                <AccordionTrigger
-                  className={dark ? 'text-white hover:text-securenext-accent' : ''}
-                >
+                <AccordionTrigger className="text-white hover:text-securenext-accent">
                   {item.question}
                 </AccordionTrigger>
                 <AccordionContent>
-                  <p className={`leading-relaxed ${dark ? 'text-white/70' : 'text-gray-600'}`}>
+                  <p className="leading-relaxed text-white/70">
                     {item.answer}
                   </p>
                 </AccordionContent>

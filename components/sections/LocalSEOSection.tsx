@@ -37,7 +37,7 @@ export function LocalSEOSection() {
 
   return (
     <section
-      className="py-20 bg-white"
+      className="py-20"
       aria-labelledby="local-seo-heading"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -50,11 +50,11 @@ export function LocalSEOSection() {
         >
           <h2
             id="local-seo-heading"
-            className="text-3xl sm:text-4xl font-bold text-securenext-navy"
+            className="text-3xl sm:text-4xl font-bold text-white"
           >
             Cybersecurity Services Across Chicagoland
           </h2>
-          <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="mt-4 text-lg text-white/70 max-w-3xl mx-auto">
             SecureNext Networks serves organizations across the five-county Chicago metropolitan area —
             delivering cybersecurity consulting, network security assessments, and compliance programs
             to organizations that need a local partner, not a remote vendor.
@@ -65,7 +65,7 @@ export function LocalSEOSection() {
           {counties.map((county, index) => (
             <motion.div
               key={county.name}
-              className="bg-securenext-gray rounded-xl p-6"
+              className="glass-card p-6"
               initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
               whileInView={prefersReducedMotion ? {} : { opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -73,15 +73,16 @@ export function LocalSEOSection() {
             >
               <div className="flex items-center gap-2 mb-3">
                 <MapPin className="h-4 w-4 text-securenext-accent shrink-0" aria-hidden="true" />
-                <h3 className="font-semibold text-securenext-navy">{county.name}</h3>
+                <h3 className="font-semibold text-white">{county.name}</h3>
               </div>
-              <p className="text-sm text-gray-600 leading-relaxed">{county.description}</p>
+              <p className="text-sm text-white/70 leading-relaxed">{county.description}</p>
             </motion.div>
           ))}
 
           {/* Local value prop */}
           <motion.div
-            className="bg-securenext-navy rounded-xl p-6 text-white"
+            className="glass-card p-6 border-securenext-accent/30"
+            style={{ background: 'rgba(29, 123, 255, 0.10)' }}
             initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
             whileInView={prefersReducedMotion ? {} : { opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -107,17 +108,17 @@ export function LocalSEOSection() {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <div className="prose-securenext">
-            <h3 className="text-xl font-bold text-securenext-navy mb-4">
+            <h3 className="text-xl font-bold text-white mb-4">
               Cybersecurity Company in Chicago: Why SecureNext
             </h3>
-            <p className="text-gray-600 leading-relaxed mb-4">
+            <p className="text-white/70 leading-relaxed mb-4">
               Chicago businesses searching for a cybersecurity company face a market crowded with
               IT support firms that have added security to their service menus without the specialized
               expertise security requires. SecureNext was built as a cybersecurity-first firm — our
               entire practice is focused on security assessment, compliance program development,
               network security design, and incident response, not on helpdesk support or hardware sales.
             </p>
-            <p className="text-gray-600 leading-relaxed mb-4">
+            <p className="text-white/70 leading-relaxed mb-4">
               Organizations across the Chicago metro — from physician practices in Naperville that need
               a HIPAA security risk analysis, to manufacturers in Joliet preparing for CMMC certification,
               to professional services firms in the Loop dealing with new compliance requirements from
@@ -125,7 +126,7 @@ export function LocalSEOSection() {
               security disciplines these organizations need, not generalist IT experience relabeled as
               cybersecurity consulting.
             </p>
-            <p className="text-gray-600 leading-relaxed">
+            <p className="text-white/70 leading-relaxed">
               If your organization is in Cook County, DuPage County, Lake County, Will County, or Kane
               County and you need a cybersecurity partner that understands your industry, your compliance
               obligations, and the specific threat landscape facing Chicago-area businesses in your sector,

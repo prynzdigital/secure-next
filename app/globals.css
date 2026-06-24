@@ -37,16 +37,47 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: #041028;
+  background-image: linear-gradient(160deg, #041028 0%, #071a3d 35%, #0a2e6d 60%, #071a3d 85%, #041028 100%);
+  background-attachment: fixed;
+  min-height: 100%;
 }
 
 body {
-  background-color: #ffffff;
-  color: #0a2e6d;
+  background: transparent;
+  color: #ffffff;
   font-family: 'Inter', system-ui, sans-serif;
   font-size: 17px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Glassmorphism utilities */
+.glass-card {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.75rem;
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.10);
+}
+
+.glass-surface {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0.75rem;
+}
+
+.glass-header {
+  background: rgba(7, 26, 61, 0.80);
+  backdrop-filter: blur(20px) saturate(1.4);
+  -webkit-backdrop-filter: blur(20px) saturate(1.4);
 }
 
 /* Focus ring accessibility */
@@ -78,7 +109,7 @@ body {
 .prose-securenext h2 {
   font-size: 1.75rem;
   font-weight: 700;
-  color: #0a2e6d;
+  color: #ffffff;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
@@ -86,21 +117,21 @@ body {
 .prose-securenext h3 {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #0a2e6d;
+  color: #ffffff;
   margin-top: 1.5rem;
   margin-bottom: 0.75rem;
 }
 
 .prose-securenext p {
   margin-bottom: 1.25rem;
-  color: #374151;
+  color: rgba(255, 255, 255, 0.80);
 }
 
 .prose-securenext ul,
 .prose-securenext ol {
   padding-left: 1.5rem;
   margin-bottom: 1.25rem;
-  color: #374151;
+  color: rgba(255, 255, 255, 0.80);
 }
 
 .prose-securenext li {
@@ -109,19 +140,17 @@ body {
 
 .prose-securenext strong {
   font-weight: 600;
-  color: #0a2e6d;
+  color: #ffffff;
 }
 
 .prose-securenext a {
   color: #1d7bff;
   text-decoration: underline;
-  /* font-weight: 600 shifts contrast calculation to large-text threshold (3:1),
-     which Accent Blue at 14px+ bold passes per design-system.md §Pairing 7 */
   font-weight: 600;
 }
 
 .prose-securenext a:hover {
-  color: #1560cc;
+  color: #5ba4ff;
 }
 
 .prose-securenext table {
@@ -131,24 +160,24 @@ body {
 }
 
 .prose-securenext th {
-  background-color: #f5f7fa;
+  background-color: rgba(255, 255, 255, 0.08);
   font-weight: 600;
   text-align: left;
   padding: 0.75rem 1rem;
-  border-bottom: 2px solid #e5e7eb;
-  color: #0a2e6d;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
 }
 
 .prose-securenext td {
   padding: 0.75rem 1rem;
-  border-bottom: 1px solid #e5e7eb;
-  color: #374151;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+  color: rgba(255, 255, 255, 0.80);
 }
 
 .prose-securenext blockquote {
   border-left: 4px solid #1d7bff;
   padding-left: 1rem;
   margin-left: 0;
-  color: #6b7280;
+  color: rgba(255, 255, 255, 0.60);
   font-style: italic;
 }

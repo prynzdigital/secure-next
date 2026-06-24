@@ -88,7 +88,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
         />
       </head>
-      <body className="min-h-screen bg-white font-sans antialiased">
+      <body className="min-h-screen font-sans antialiased">
         {/* Skip navigation — accessibility requirement */}
         <a href="#main-content" className="skip-nav">
           Skip to main content

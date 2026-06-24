@@ -120,18 +120,18 @@ export function ServicesGrid() {
 
   return (
     <section
-      className="py-20 bg-securenext-gray"
+      className="py-20"
       aria-labelledby="services-heading"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2
             id="services-heading"
-            className="text-3xl sm:text-4xl font-bold text-securenext-navy"
+            className="text-3xl sm:text-4xl font-bold text-white"
           >
             Cybersecurity Services for Chicago Organizations
           </h2>
-          <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="mt-4 text-lg text-white/70 max-w-2xl mx-auto">
             From initial assessment to ongoing monitoring — specialized security services that match your organization&apos;s actual risk and compliance profile.
           </p>
         </div>

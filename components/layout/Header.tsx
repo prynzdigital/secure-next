@@ -38,8 +38,8 @@ export function Header() {
       {/* Animation spec 6.5 — transparent header that gains bg on scroll */}
       <motion.header
         className={cn(
-          'fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-securenext-navy',
-          scrolled && 'shadow-lg'
+          'fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass-header border-b border-white/10',
+          scrolled && 'shadow-lg shadow-black/30'
         )}
         initial={prefersReducedMotion ? {} : { y: -100 }}
         animate={prefersReducedMotion ? {} : { y: 0 }}
@@ -108,15 +108,15 @@ export function Header() {
                           onMouseEnter={() => setServicesOpen(true)}
                           onMouseLeave={() => setServicesOpen(false)}
                         >
-                          <div className="w-72 rounded-xl bg-white shadow-xl border border-gray-100 overflow-hidden">
+                          <div className="w-72 rounded-xl overflow-hidden shadow-xl shadow-black/40 glass-card" style={{borderRadius: '0.75rem'}}>
                             <div className="p-3">
                               {FOOTER_SERVICE_LINKS.map((svc) => (
                                 <Link
                                   key={svc.href}
                                   href={svc.href}
                                   className={cn(
-                                    'flex items-center gap-2 px-3 py-2 rounded-md text-sm text-securenext-navy font-medium',
-                                    'hover:bg-securenext-gray hover:text-securenext-accent transition-colors duration-150'
+                                    'flex items-center gap-2 px-3 py-2 rounded-md text-sm text-white font-medium',
+                                    'hover:bg-white/10 hover:text-securenext-accent transition-colors duration-150'
                                   )}
                                   onClick={() => setServicesOpen(false)}
                                 >
@@ -125,10 +125,10 @@ export function Header() {
                                 </Link>
                               ))}
                             </div>
-                            <div className="border-t border-gray-100 p-3">
+                            <div className="border-t border-white/10 p-3">
                               <Link
                                 href="/services"
-                                className="flex items-center justify-center py-2 text-sm font-semibold text-securenext-accent hover:text-securenext-accent-dark transition-colors"
+                                className="flex items-center justify-center py-2 text-sm font-semibold text-securenext-accent hover:text-white transition-colors"
                                 onClick={() => setServicesOpen(false)}
                               >
                                 View All Services →
@@ -197,7 +197,7 @@ export function Header() {
           {mobileOpen && (
             <motion.div
               id="mobile-menu"
-              className="lg:hidden bg-securenext-navy border-t border-white/10"
+              className="lg:hidden glass-header border-t border-white/10"
               initial={prefersReducedMotion ? {} : { opacity: 0, height: 0 }}
               animate={prefersReducedMotion ? {} : { opacity: 1, height: 'auto' }}
               exit={prefersReducedMotion ? {} : { opacity: 0, height: 0 }}

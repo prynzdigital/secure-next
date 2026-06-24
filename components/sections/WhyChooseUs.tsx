@@ -68,13 +68,13 @@ export function WhyChooseUs() {
     : cardVariants
 
   return (
-    <section className="py-16 lg:py-24 bg-white" aria-labelledby="why-choose-heading">
+    <section className="py-16 lg:py-24" aria-labelledby="why-choose-heading">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 id="why-choose-heading" className="text-3xl sm:text-4xl font-bold text-securenext-navy">
+          <h2 id="why-choose-heading" className="text-3xl sm:text-4xl font-bold text-white">
             Why Organizations Choose SecureNext
           </h2>
-          <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="mt-4 text-lg text-white/70 max-w-2xl mx-auto">
             There are other cybersecurity firms. Here is why Chicago organizations consistently choose us.
           </p>
         </div>
@@ -92,15 +92,15 @@ export function WhyChooseUs() {
               <motion.div
                 key={value.headline}
                 variants={activeCardVariants}
-                className="flex flex-col p-6 bg-securenext-gray rounded-xl border border-securenext-silver/20 hover:border-securenext-accent/30 hover:shadow-md transition-all duration-300"
+                className="glass-card flex flex-col p-6 hover:border-securenext-accent/40 hover:shadow-lg hover:shadow-securenext-accent/10 transition-all duration-300"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-securenext-accent/10 text-securenext-accent mb-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-securenext-accent/20 text-securenext-accent mb-4">
                   <Icon className="h-6 w-6" aria-hidden="true" />
                 </div>
-                <h3 className="font-semibold text-securenext-navy text-lg mb-3 leading-snug">
+                <h3 className="font-semibold text-white text-lg mb-3 leading-snug">
                   {value.headline}
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{value.description}</p>
+                <p className="text-white/70 text-sm leading-relaxed">{value.description}</p>
               </motion.div>
             )
           })}

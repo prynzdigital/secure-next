@@ -29,20 +29,17 @@ export function FinalCTA({
 
   return (
     <section
-      className="py-24 bg-securenext-navy relative overflow-hidden"
+      className="py-24 relative overflow-hidden"
       aria-labelledby="final-cta-heading"
     >
-      {/* Background decorative */}
-      <div className="absolute inset-0 opacity-[0.03]" aria-hidden="true">
-        <div
-          style={{
-            backgroundImage:
-              'radial-gradient(circle at 25% 50%, rgba(29,123,255,1) 0%, transparent 50%), radial-gradient(circle at 75% 50%, rgba(29,123,255,0.6) 0%, transparent 50%)',
-            width: '100%',
-            height: '100%',
-          }}
-        />
+      {/* Background decorative glows */}
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-securenext-accent opacity-[0.12] blur-3xl" />
+        <div className="absolute top-1/2 right-1/4 translate-x-1/2 -translate-y-1/2 w-72 h-72 rounded-full bg-securenext-accent opacity-[0.07] blur-3xl" />
       </div>
+
+      {/* Glass panel */}
+      <div className="absolute inset-0" style={{ background: 'rgba(7, 26, 61, 0.40)', backdropFilter: 'blur(4px)', WebkitBackdropFilter: 'blur(4px)' }} aria-hidden="true" />
 
       <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
         <motion.h2

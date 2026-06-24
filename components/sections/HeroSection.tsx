@@ -34,8 +34,9 @@ export function HeroSection() {
             backgroundSize: '60px 60px',
           }}
         />
-        {/* Radial glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-securenext-accent opacity-[0.08] blur-3xl" />
+        {/* Radial glows */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-securenext-accent opacity-[0.12] blur-3xl" />
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-securenext-accent opacity-[0.06] blur-2xl" />
         {/* Shield watermark */}
         <motion.div
           className="absolute right-8 top-1/2 -translate-y-1/2 opacity-[0.05]"
@@ -55,7 +56,7 @@ export function HeroSection() {
             animate={prefersReducedMotion ? {} : { opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: 'easeOut', delay: 0.1 }}
           >
-            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-securenext-accent/20 text-securenext-accent text-sm font-semibold">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-securenext-accent text-sm font-semibold" style={{ background: 'rgba(29,123,255,0.15)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', border: '1px solid rgba(29,123,255,0.30)' }}>
               <Shield className="h-3.5 w-3.5" aria-hidden="true" />
               Chicago Cybersecurity Specialists
             </span>
