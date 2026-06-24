@@ -2,67 +2,83 @@
 
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion, useReducedMotion } from 'framer-motion'
 import { Shield, ArrowRight, Phone } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { CONTACT_PHONE } from '@/lib/constants'
 
-/**
- * Animation spec 6.1 — Hero
- * H1: fade-in + slide-up 0.6s ease-out, delay 0.2s
- * Subhead: same, delay 0.4s
- * CTA buttons: fade-in delay 0.6s
- * Background shield: pulse 3s infinite
- */
 export function HeroSection() {
   const hasPhone = CONTACT_PHONE && !CONTACT_PHONE.includes('NEEDS')
   const prefersReducedMotion = useReducedMotion()
 
   return (
     <section
-      className="relative min-h-[88vh] flex items-center overflow-hidden bg-securenext-navy"
+      className="relative min-h-[88vh] flex items-center overflow-hidden"
       aria-labelledby="hero-heading"
     >
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
-        {/* Grid pattern */}
-        <div
-          className="absolute inset-0 opacity-[0.04]"
-          style={{
-            backgroundImage:
-              'linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)',
-            backgroundSize: '60px 60px',
-          }}
-        />
-        {/* Radial glows */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-securenext-accent opacity-[0.12] blur-3xl" />
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-securenext-accent opacity-[0.06] blur-2xl" />
-        {/* Shield watermark */}
-        <motion.div
-          className="absolute right-8 top-1/2 -translate-y-1/2 opacity-[0.05]"
-          animate={prefersReducedMotion ? {} : { scale: [1, 1.05, 1] }}
-          transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-        >
-          <Shield className="h-[480px] w-[480px] text-white" />
-        </motion.div>
-      </div>
+      {/* Background photo */}
+      <Image
+        src="/images/hero.jpg"
+        alt=""
+        fill
+        className="object-cover object-center"
+        priority
+        aria-hidden="true"
+      />
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
-        <div className="max-w-3xl">
-          {/* Eyebrow */}
+      {/* Dark gradient overlay — strong left, fades right */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            'linear-gradient(to right, rgba(4,16,40,0.97) 0%, rgba(4,16,40,0.92) 38%, rgba(4,16,40,0.65) 60%, rgba(4,16,40,0.25) 100%)',
+        }}
+        aria-hidden="true"
+      />
+
+      {/* Subtle grid texture on overlay */}
+      <div
+        className="absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage:
+            'linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)',
+          backgroundSize: '60px 60px',
+        }}
+        aria-hidden="true"
+      />
+
+      {/* Accent glow on the left */}
+      <div
+        className="absolute top-1/2 -left-32 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-securenext-accent opacity-[0.10] blur-3xl pointer-events-none"
+        aria-hidden="true"
+      />
+
+      {/* Content — left-aligned */}
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 lg:py-32 w-full">
+        <div className="max-w-xl lg:max-w-2xl">
+          {/* Eyebrow badge */}
           <motion.div
-            className="mb-6 flex items-center gap-2"
+            className="mb-6"
             initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
             animate={prefersReducedMotion ? {} : { opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: 'easeOut', delay: 0.1 }}
           >
-            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-securenext-accent text-sm font-semibold" style={{ background: 'rgba(29,123,255,0.15)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', border: '1px solid rgba(29,123,255,0.30)' }}>
+            <span
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-securenext-accent text-sm font-semibold tracking-wide uppercase"
+              style={{
+                background: 'rgba(29,123,255,0.15)',
+                backdropFilter: 'blur(12px)',
+                WebkitBackdropFilter: 'blur(12px)',
+                border: '1px solid rgba(29,123,255,0.35)',
+              }}
+            >
               <Shield className="h-3.5 w-3.5" aria-hidden="true" />
-              Chicago Cybersecurity Specialists
+              24/7 Best Cyber Security Solutions
             </span>
           </motion.div>
 
-          {/* H1 — per metadata.md SEO specification */}
+          {/* H1 */}
           <motion.h1
             id="hero-heading"
             className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight"
@@ -74,9 +90,9 @@ export function HeroSection() {
             <span className="text-securenext-accent">Securing Futures.</span>
           </motion.h1>
 
-          {/* Subheading — approved copy from homepage.md hero section */}
+          {/* Subheading */}
           <motion.p
-            className="mt-4 text-2xl sm:text-3xl font-semibold text-white/90 leading-snug max-w-2xl"
+            className="mt-4 text-xl sm:text-2xl font-semibold text-white/90 leading-snug"
             initial={prefersReducedMotion ? {} : { opacity: 0, y: 24 }}
             animate={prefersReducedMotion ? {} : { opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: 'easeOut', delay: 0.3 }}
@@ -86,7 +102,7 @@ export function HeroSection() {
 
           {/* Body copy */}
           <motion.p
-            className="mt-6 text-lg sm:text-xl text-white/80 leading-relaxed max-w-2xl"
+            className="mt-5 text-base sm:text-lg text-white/75 leading-relaxed"
             initial={prefersReducedMotion ? {} : { opacity: 0, y: 24 }}
             animate={prefersReducedMotion ? {} : { opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: 'easeOut', delay: 0.4 }}
@@ -98,7 +114,7 @@ export function HeroSection() {
 
           {/* CTA buttons */}
           <motion.div
-            className="mt-10 flex flex-col sm:flex-row gap-4"
+            className="mt-8 flex flex-col sm:flex-row gap-4"
             initial={prefersReducedMotion ? {} : { opacity: 0 }}
             animate={prefersReducedMotion ? {} : { opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.6 }}
@@ -110,15 +126,13 @@ export function HeroSection() {
               </Link>
             </Button>
             <Button asChild variant="navy-outline" size="lg">
-              <Link href="/services">
-                View Our Services
-              </Link>
+              <Link href="/services">View Our Services</Link>
             </Button>
           </motion.div>
 
           {/* Social proof / phone */}
           <motion.div
-            className="mt-10 flex flex-wrap items-center gap-6"
+            className="mt-8 flex flex-wrap items-center gap-6"
             initial={prefersReducedMotion ? {} : { opacity: 0 }}
             animate={prefersReducedMotion ? {} : { opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.8 }}
@@ -133,7 +147,7 @@ export function HeroSection() {
               </a>
             )}
             <div className="flex items-center gap-2 text-white/60 text-sm">
-              <span className="h-1 w-1 rounded-full bg-securenext-green" aria-hidden="true" />
+              <span className="h-1.5 w-1.5 rounded-full bg-securenext-green" aria-hidden="true" />
               Serving Cook, DuPage, Lake, Will &amp; Kane Counties
             </div>
           </motion.div>

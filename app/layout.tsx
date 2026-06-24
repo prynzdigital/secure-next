@@ -4,6 +4,7 @@ import './globals.css'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { FloatingCTA } from '@/components/layout/FloatingCTA'
+import { BackToTop } from '@/components/layout/BackToTop'
 import { organizationSchema } from '@/lib/schema'
 import {
   SITE_NAME,
@@ -99,6 +100,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <FloatingCTA />
+        <BackToTop />
       </body>
     </html>
   )
