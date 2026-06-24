@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 52" fill="none">
+  <!-- Shield icon -->
+  <path d="M18 8L6 13V26C6 34 12 41 18 44C24 41 30 34 30 26V13L18 8Z" fill="#0A2E6D"/>
+  <path d="M18 14L11 17V25C11 31 14.5 36 18 38.5C21.5 36 25 31 25 25V17L18 14Z" fill="#1D7BFF"/>
+  <text x="15" y="30" font-family="Inter, sans-serif" font-size="8" font-weight="700" fill="#FFFFFF" text-anchor="middle">SN</text>
+  <!-- Wordmark -->
+  <text x="40" y="24" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#0A2E6D">SecureNext</text>
+  <text x="40" y="40" font-family="Inter, sans-serif" font-size="9" font-weight="400" fill="#8B8E95" letter-spacing="0.5">NETWORKS</text>
+</svg>

@@ -1,103 +1,122 @@
-import Image from "next/image";
+import type { Metadata } from 'next'
+import { SITE_URL, SITE_NAME } from '@/lib/constants'
+import { faqSchema, breadcrumbSchema } from '@/lib/schema'
+import { HeroSection } from '@/components/sections/HeroSection'
+import { TrustBar } from '@/components/sections/TrustBar'
+import { ServicesGrid } from '@/components/sections/ServicesGrid'
+import { ProcessTimeline } from '@/components/sections/ProcessTimeline'
+import { LocalSEOSection } from '@/components/sections/LocalSEOSection'
+import { FAQSection } from '@/components/sections/FAQSection'
+import { FinalCTA } from '@/components/sections/FinalCTA'
+import { AboutSnippet } from '@/components/sections/AboutSnippet'
+import { IndustriesTeaser } from '@/components/sections/IndustriesTeaser'
+import { WhyChooseUs } from '@/components/sections/WhyChooseUs'
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: `Cybersecurity Company Chicago | ${SITE_NAME}`,
+  description:
+    "Chicago's cybersecurity specialists. We protect businesses, healthcare orgs, and governments from cyber threats. Request a free assessment today.",
+  alternates: { canonical: SITE_URL },
+  openGraph: {
+    title: `Cybersecurity Company Chicago | ${SITE_NAME}`,
+    description:
+      "Chicago's cybersecurity specialists. We protect businesses, healthcare orgs, and governments from cyber threats. Request a free assessment today.",
+    url: SITE_URL,
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `Cybersecurity Company Chicago | ${SITE_NAME}`,
+    description:
+      "Chicago's cybersecurity specialists. We protect businesses, healthcare orgs, and governments from cyber threats. Request a free assessment today.",
+  },
+}
+
+const homepageFaqs = [
+  {
+    question: 'What cybersecurity services does SecureNext provide?',
+    answer:
+      'SecureNext provides cybersecurity consulting, network security assessments, security risk and compliance programs (HIPAA, NIST, CMMC, PCI-DSS), firewall and VPN solutions, cloud security, managed security monitoring, incident response, penetration testing, and cybersecurity awareness training for Chicago-area organizations.',
+  },
+  {
+    question: 'Does SecureNext work with small businesses?',
+    answer:
+      'Yes. Most of our clients are small to mid-sized organizations — the ones that need enterprise-quality security expertise without the overhead of an in-house security team. We scope every engagement to the actual size and risk profile of the organization, not a generic template.',
+  },
+  {
+    question: 'What areas of Chicago does SecureNext serve?',
+    answer:
+      'SecureNext serves organizations across the five-county Chicago metropolitan area: Cook County, DuPage County, Lake County, Will County, and Kane County. We provide on-site services throughout the metro.',
+  },
+  {
+    question: 'How much does a cybersecurity assessment cost?',
+    answer:
+      'We establish cost clearly before any work begins. Assessment scope and cost depend on the size of your environment, your compliance requirements, and the depth of analysis you need. We design assessments to fit the budgets of small and mid-sized businesses — not enterprise pricing for organizations that do not need enterprise scope. Contact us and we will have that conversation without obligation.',
+  },
+  {
+    question: 'Does SecureNext sign Business Associate Agreements for HIPAA clients?',
+    answer:
+      'Yes. We operate as a Business Associate under HIPAA for all healthcare engagements and execute a BAA prior to any access to protected health information. This is standard practice for all our healthcare clients.',
+  },
+  {
+    question: 'What should I do if I think my organization has been breached?',
+    answer:
+      'Call us immediately. Do not shut down infected systems — this destroys forensic evidence. If possible, isolate affected systems from the network without shutting them down. Do not attempt to remove malware or change passwords across the environment without guidance. We provide incident response services and the first call is always a phone call.',
+  },
+  {
+    question: 'How long does a network security assessment take?',
+    answer:
+      'For a single-location organization, two to four weeks from kickoff to final report delivery, depending on the size and complexity of your environment. The assessment includes a findings walkthrough session — not just a report delivered to your inbox.',
+  },
+  {
+    question: 'Do I need to have existing security policies before engaging SecureNext?',
+    answer:
+      'No. Many clients engage us precisely because they do not have formal security policies. We assess what exists and help develop the policy foundation as part of the engagement. Starting from scratch is not an obstacle — it is a defined starting point.',
+  },
+  {
+    question: 'Can SecureNext work alongside our existing IT provider or MSP?',
+    answer:
+      'Yes — and this is the most common arrangement. We work as the security specialist layer alongside your IT support provider, each operating in our respective areas of expertise. We are happy to engage with your IT provider or MSP directly to coordinate recommendations.',
+  },
+  {
+    question: 'What compliance frameworks does SecureNext support?',
+    answer:
+      'We support HIPAA Security Rule risk analysis, NIST Cybersecurity Framework assessment and alignment, CMMC readiness for defense contractors, and PCI-DSS compliance programs. We also support SOC 2 readiness preparation.',
+  },
+]
+
+export default function HomePage() {
+  const faqJsonLd = faqSchema(homepageFaqs)
+  const breadcrumbJsonLd = breadcrumbSchema([{ name: 'Home', item: SITE_URL }])
+
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+      <HeroSection />
+      <TrustBar />
+      <AboutSnippet />
+      <ServicesGrid />
+      <IndustriesTeaser />
+      <WhyChooseUs />
+      <ProcessTimeline />
+      <LocalSEOSection />
+      <FAQSection
+        items={homepageFaqs}
+        heading="Frequently Asked Questions"
+        subheading="Common questions from Chicago organizations considering a cybersecurity partner."
+      />
+      <FinalCTA
+        heading="Protecting Networks. Securing Futures."
+        subheading="Start with a free security assessment — no commitment required. Know exactly where your organization stands."
+      />
+    </>
+  )
 }
