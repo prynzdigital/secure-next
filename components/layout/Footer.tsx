@@ -24,13 +24,20 @@ export function Footer() {
 
           {/* Column 1: Brand */}
           <div className="lg:col-span-1">
-            <Link href="/" aria-label="SecureNext Networks — Home">
-              <Image
-                src="/images/logo-placeholder-white.svg"
-                alt="SecureNext Networks"
-                width={160}
-                height={42}
-              />
+            <Link href="/" aria-label="SecureNext Networks — Home" className="flex items-center gap-3">
+              <span className="flex-shrink-0 bg-white rounded-md p-1">
+                <Image
+                  src="/images/securenext-logo.png"
+                  alt=""
+                  width={44}
+                  height={44}
+                  className="object-contain"
+                />
+              </span>
+              <span className="flex flex-col leading-tight">
+                <span className="text-white font-bold text-base tracking-tight">SecureNext</span>
+                <span className="text-white/60 font-medium text-[11px] tracking-wide uppercase">Networks & Cyber Defense</span>
+              </span>
             </Link>
             <p className="mt-4 text-sm text-white/70 leading-relaxed">
               {SITE_TAGLINE}

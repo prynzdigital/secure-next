@@ -38,10 +38,8 @@ export function Header() {
       {/* Animation spec 6.5 — transparent header that gains bg on scroll */}
       <motion.header
         className={cn(
-          'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-          scrolled
-            ? 'bg-securenext-navy shadow-lg'
-            : 'bg-transparent'
+          'fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-securenext-navy',
+          scrolled && 'shadow-lg'
         )}
         initial={prefersReducedMotion ? {} : { y: -100 }}
         animate={prefersReducedMotion ? {} : { y: 0 }}
@@ -53,16 +51,23 @@ export function Header() {
             {/* Logo */}
             <Link
               href="/"
-              className="flex-shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-securenext-accent focus-visible:ring-offset-2 rounded-sm"
+              className="flex items-center gap-3 flex-shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-securenext-accent focus-visible:ring-offset-2 rounded-sm"
               aria-label="SecureNext Networks — Home"
             >
-              <Image
-                src="/images/logo-placeholder-white.svg"
-                alt="SecureNext Networks"
-                width={160}
-                height={42}
-                priority
-              />
+              <span className="flex-shrink-0 bg-white rounded-md p-1">
+                <Image
+                  src="/images/securenext-logo.png"
+                  alt=""
+                  width={44}
+                  height={44}
+                  className="object-contain"
+                  priority
+                />
+              </span>
+              <span className="flex flex-col leading-tight">
+                <span className="text-white font-bold text-base tracking-tight">SecureNext</span>
+                <span className="text-white/70 font-medium text-[11px] tracking-wide uppercase">Networks & Cyber Defense</span>
+              </span>
             </Link>
 
             {/* Desktop nav */}

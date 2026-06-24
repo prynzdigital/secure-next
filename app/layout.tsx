@@ -21,6 +21,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+  icons: {
+    icon: '/images/securenext-icon.jpeg',
+    shortcut: '/images/securenext-icon.jpeg',
+    apple: '/images/securenext-icon.jpeg',
+  },
   title: {
     default: `Cybersecurity Company Chicago | ${SITE_NAME}`,
     template: `%s | ${SITE_NAME}`,
