@@ -19,7 +19,7 @@ export function HeroSection() {
     >
       {/* Background photo */}
       <Image
-        src="/images/hero.jpg"
+        src="/images/hero1.jpg"
         alt=""
         fill
         className="object-cover object-center"
