@@ -107,7 +107,7 @@ export default async function BlogPostPage({ params }: Props) {
 
             {/* Main content */}
             <article aria-labelledby="post-heading">
-              <div className="prose-securenext">
+              <div className="prose-light">
                 {post.body.split('\n\n').map((block, i) => {
                   // Heading detection
                   if (block.startsWith('**') && block.endsWith('**') && block.split('\n').length === 1) {

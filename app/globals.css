@@ -2,8 +2,8 @@
 
 @theme {
   /* SecureNext Brand Colors */
-  --color-securenext-navy: #0a2e6d;
-  --color-securenext-navy-dark: #071a3d;
+  --color-securenext-navy: #1a3e72;
+  --color-securenext-navy-dark: #0d2247;
   --color-securenext-silver: #8b8e95;
   --color-securenext-gray: #f5f7fa;
   --color-securenext-white: #ffffff;
@@ -37,8 +37,8 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: #041028;
-  background-image: linear-gradient(160deg, #041028 0%, #071a3d 35%, #0a2e6d 60%, #071a3d 85%, #041028 100%);
+  background-color: #0a1e40;
+  background-image: linear-gradient(160deg, #081630 0%, #0d2247 35%, #1a3e72 60%, #0d2247 85%, #081630 100%);
   background-attachment: fixed;
   min-height: 100%;
 }
@@ -75,7 +75,7 @@ body {
 }
 
 .glass-header {
-  background: rgba(7, 26, 61, 0.80);
+  background: rgba(13, 34, 71, 0.88);
   backdrop-filter: blur(20px) saturate(1.4);
   -webkit-backdrop-filter: blur(20px) saturate(1.4);
 }
@@ -105,7 +105,7 @@ body {
   left: 1rem;
 }
 
-/* Prose-style body text for blog */
+/* Prose-style body text — dark (navy) sections */
 .prose-securenext h2 {
   font-size: 1.75rem;
   font-weight: 700;
@@ -179,5 +179,82 @@ body {
   padding-left: 1rem;
   margin-left: 0;
   color: rgba(255, 255, 255, 0.60);
+  font-style: italic;
+}
+
+/* Prose-style body text — light (white/gray) sections */
+.prose-light h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1a3e72;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.prose-light h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a3e72;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose-light p {
+  margin-bottom: 1.25rem;
+  color: #374151;
+}
+
+.prose-light ul,
+.prose-light ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+  color: #374151;
+}
+
+.prose-light li {
+  margin-bottom: 0.5rem;
+}
+
+.prose-light strong {
+  font-weight: 600;
+  color: #1a3e72;
+}
+
+.prose-light a {
+  color: #1d7bff;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.prose-light a:hover {
+  color: #1560cc;
+}
+
+.prose-light table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+.prose-light th {
+  background-color: #f5f7fa;
+  font-weight: 600;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-bottom: 2px solid #e5e7eb;
+  color: #1a3e72;
+}
+
+.prose-light td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #f3f4f6;
+  color: #374151;
+}
+
+.prose-light blockquote {
+  border-left: 4px solid #1d7bff;
+  padding-left: 1rem;
+  margin-left: 0;
+  color: #6b7280;
   font-style: italic;
 }
