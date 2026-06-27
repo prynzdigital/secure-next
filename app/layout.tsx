@@ -23,8 +23,8 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   icons: {
-    icon: '/images/favicon.jpeg',
-    shortcut: '/images/favicon.jpeg',
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
     apple: '/images/favicon.jpeg',
   },
   title: {
