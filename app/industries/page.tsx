@@ -69,6 +69,7 @@ export default function IndustriesPage() {
                 title={industry.title}
                 intro={industry.intro}
                 icon={industryIcons[industry.slug]}
+                light
                 className="h-full"
               />
             ))}
