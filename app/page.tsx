@@ -106,13 +106,13 @@ export default function HomePage() {
       <ServicesGrid />
       <IndustriesTeaser />
       <WhyChooseUs />
-      <ProcessTimeline />
-      <LocalSEOSection />
       <FAQSection
         items={homepageFaqs}
         heading="Frequently Asked Questions"
         subheading="Common questions from Chicago organizations considering a cybersecurity partner."
       />
+      <ProcessTimeline />
+      <LocalSEOSection />
       <FinalCTA
         heading="Protecting Networks. Securing Futures."
         subheading="Start with a free security assessment — no commitment required. Know exactly where your organization stands."
