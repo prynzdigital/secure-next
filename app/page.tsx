@@ -110,6 +110,34 @@ export default function HomePage() {
         items={homepageFaqs}
         heading="Frequently Asked Questions"
         subheading="Common questions from Chicago organizations considering a cybersecurity partner."
+        topContent={
+          <div>
+            <h2 className="text-2xl font-bold text-securenext-navy mb-6">
+              Cybersecurity Company in Chicago: Why SecureNext
+            </h2>
+            <p className="text-gray-700 leading-relaxed mb-4 text-[17px]">
+              Chicago businesses searching for a cybersecurity company face a market crowded with
+              IT support firms that have added security to their service menus without the specialized
+              expertise security requires. SecureNext was built as a cybersecurity-first firm — our
+              entire practice is focused on security assessment, compliance program development,
+              network security design, and incident response, not on helpdesk support or hardware sales.
+            </p>
+            <p className="text-gray-700 leading-relaxed mb-4 text-[17px]">
+              Organizations across the Chicago metro — from physician practices in Naperville that need
+              a HIPAA security risk analysis, to manufacturers in Joliet preparing for CMMC certification,
+              to professional services firms in the Loop dealing with new compliance requirements from
+              enterprise clients — engage SecureNext because the firm has genuine expertise in the
+              security disciplines these organizations need, not generalist IT experience relabeled as
+              cybersecurity consulting.
+            </p>
+            <p className="text-gray-700 leading-relaxed text-[17px]">
+              If your organization is in Cook County, DuPage County, Lake County, Will County, or Kane
+              County and you need a cybersecurity partner that understands your industry, your compliance
+              obligations, and the specific threat landscape facing Chicago-area businesses in your sector,
+              the conversation starts here.
+            </p>
+          </div>
+        }
       />
       <ProcessTimeline />
       <LocalSEOSection />

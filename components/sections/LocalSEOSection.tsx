@@ -102,41 +102,6 @@ export function LocalSEOSection() {
           </motion.div>
         </div>
 
-        {/* Keyword-rich prose section */}
-        <motion.div
-          className="max-w-4xl mx-auto"
-          initial={prefersReducedMotion ? {} : { opacity: 0 }}
-          whileInView={prefersReducedMotion ? {} : { opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          <div className="prose-securenext">
-            <h3 className="text-xl font-bold text-white mb-4">
-              Cybersecurity Company in Chicago: Why SecureNext
-            </h3>
-            <p className="text-white/70 leading-relaxed mb-4">
-              Chicago businesses searching for a cybersecurity company face a market crowded with
-              IT support firms that have added security to their service menus without the specialized
-              expertise security requires. SecureNext was built as a cybersecurity-first firm — our
-              entire practice is focused on security assessment, compliance program development,
-              network security design, and incident response, not on helpdesk support or hardware sales.
-            </p>
-            <p className="text-white/70 leading-relaxed mb-4">
-              Organizations across the Chicago metro — from physician practices in Naperville that need
-              a HIPAA security risk analysis, to manufacturers in Joliet preparing for CMMC certification,
-              to professional services firms in the Loop dealing with new compliance requirements from
-              enterprise clients — engage SecureNext because the firm has genuine expertise in the
-              security disciplines these organizations need, not generalist IT experience relabeled as
-              cybersecurity consulting.
-            </p>
-            <p className="text-white/70 leading-relaxed">
-              If your organization is in Cook County, DuPage County, Lake County, Will County, or Kane
-              County and you need a cybersecurity partner that understands your industry, your compliance
-              obligations, and the specific threat landscape facing Chicago-area businesses in your sector,
-              the conversation starts here.
-            </p>
-          </div>
-        </motion.div>
       </div>
     </section>
   )
