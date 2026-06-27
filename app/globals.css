@@ -37,14 +37,11 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: #0a1e40;
-  background-image: linear-gradient(160deg, #081630 0%, #0d2247 35%, #1a3e72 60%, #0d2247 85%, #081630 100%);
-  background-attachment: fixed;
   min-height: 100%;
 }
 
 body {
-  background: transparent;
+  background-color: #0d2247;
   color: #ffffff;
   font-family: 'Inter', system-ui, sans-serif;
   font-size: 17px;
