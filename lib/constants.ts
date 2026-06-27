@@ -11,8 +11,7 @@ export const CONTACT_ADDRESS = '1133 E 83rd Street Unit 113'
 export const CONTACT_CITY = 'Chicago'
 export const CONTACT_STATE = 'IL'
 export const CONTACT_ZIP = '60619'
-// [NEEDS CLIENT INPUT: confirm business hours]
-export const BUSINESS_HOURS = '[NEEDS CLIENT INPUT: business hours]'
+export const BUSINESS_HOURS = 'Mon–Fri 9:00 AM – 5:00 PM CT'
 
 export const NAV_LINKS = [
   { label: 'Services', href: '/services', hasDropdown: true },
