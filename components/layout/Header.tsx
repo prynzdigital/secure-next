@@ -108,7 +108,7 @@ export function Header() {
                           onMouseEnter={() => setServicesOpen(true)}
                           onMouseLeave={() => setServicesOpen(false)}
                         >
-                          <div className="w-72 rounded-xl overflow-hidden shadow-xl shadow-black/40 glass-card" style={{borderRadius: '0.75rem'}}>
+                          <div className="w-72 rounded-xl overflow-hidden shadow-2xl shadow-black/60 border border-white/10" style={{ background: '#0d2247' }}>
                             <div className="p-3">
                               {FOOTER_SERVICE_LINKS.map((svc) => (
                                 <Link
