@@ -1,4 +1,4 @@
-import { SITE_URL, SITE_LEGAL_NAME, CONTACT_PHONE, CONTACT_EMAIL, CONTACT_ADDRESS, BUSINESS_HOURS } from './constants'
+import { SITE_URL, SITE_LEGAL_NAME, CONTACT_PHONE, CONTACT_EMAIL, CONTACT_ADDRESS, CONTACT_CITY, CONTACT_STATE, CONTACT_ZIP, BUSINESS_HOURS } from './constants'
 
 const ORG_ID = `${SITE_URL}/#organization`
 
@@ -19,10 +19,11 @@ export function organizationSchema() {
           'SecureNext Networks & Cyber Defense Solutions LLC is a Chicago cybersecurity consulting firm serving Cook, DuPage, Lake, Will, and Kane Counties.',
         address: {
           '@type': 'PostalAddress',
-          addressLocality: 'Chicago',
-          addressRegion: 'IL',
-          addressCountry: 'US',
           streetAddress: CONTACT_ADDRESS,
+          addressLocality: CONTACT_CITY,
+          addressRegion: CONTACT_STATE,
+          postalCode: CONTACT_ZIP,
+          addressCountry: 'US',
         },
         telephone: CONTACT_PHONE,
         email: CONTACT_EMAIL,

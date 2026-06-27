@@ -5,13 +5,13 @@ export const SITE_TAGLINE = 'Protecting Networks. Securing Futures.'
 export const SITE_DESCRIPTION =
   "Chicago's cybersecurity specialists. We protect businesses, healthcare orgs, and governments from cyber threats. Request a free assessment today."
 
-// [NEEDS CLIENT INPUT: OQ-3 — confirm final domain]
-// [NEEDS CLIENT INPUT: OQ-1 — confirm phone number]
-export const CONTACT_PHONE = '[NEEDS CLIENT INPUT: phone number]'
+export const CONTACT_PHONE = '(312) 998-2114'
 // [NEEDS CLIENT INPUT: confirm email address]
 export const CONTACT_EMAIL = '[NEEDS CLIENT INPUT: email address]'
-// [NEEDS CLIENT INPUT: confirm business address]
-export const CONTACT_ADDRESS = '[NEEDS CLIENT INPUT: Chicago, IL address]'
+export const CONTACT_ADDRESS = '1133 E 83rd Street Unit 113'
+export const CONTACT_CITY = 'Chicago'
+export const CONTACT_STATE = 'IL'
+export const CONTACT_ZIP = '60619'
 // [NEEDS CLIENT INPUT: confirm business hours]
 export const BUSINESS_HOURS = '[NEEDS CLIENT INPUT: business hours]'
 
