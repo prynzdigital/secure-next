@@ -49,7 +49,7 @@ export function IndustriesTeaser() {
   const prefersReducedMotion = useReducedMotion()
 
   return (
-    <section className="py-20" aria-labelledby="industries-heading">
+    <section className="py-20 bg-gray-50" aria-labelledby="industries-heading">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-12"
@@ -60,11 +60,11 @@ export function IndustriesTeaser() {
         >
           <h2
             id="industries-heading"
-            className="text-3xl sm:text-4xl font-bold text-white"
+            className="text-3xl sm:text-4xl font-bold text-securenext-navy"
           >
             Industries We Serve
           </h2>
-          <p className="mt-4 text-lg text-white/70 max-w-2xl mx-auto">
+          <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
             Cybersecurity expertise calibrated to your industry&apos;s specific compliance requirements,
             threat profile, and operational realities.
           </p>
@@ -84,6 +84,7 @@ export function IndustriesTeaser() {
                 title={industry.title}
                 intro={industry.intro}
                 icon={industry.icon}
+                light
                 className="h-full"
               />
             </motion.div>

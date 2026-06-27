@@ -15,6 +15,7 @@ import {
   GraduationCap,
 } from 'lucide-react'
 import { ServiceCard } from '@/components/shared/ServiceCard'
+import { GlowAbstract } from '@/components/shared/GlowAbstract'
 
 /**
  * Animation spec 6.3 — Card Fade-in
@@ -120,10 +121,12 @@ export function ServicesGrid() {
 
   return (
     <section
-      className="py-20"
+      className="py-20 bg-securenext-navy relative overflow-hidden"
       aria-labelledby="services-heading"
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <GlowAbstract variant="default" />
+
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2
             id="services-heading"

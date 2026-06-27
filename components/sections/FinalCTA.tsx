@@ -6,6 +6,7 @@ import { motion, useReducedMotion } from 'framer-motion'
 import { ArrowRight, Phone } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { CONTACT_PHONE, SITE_TAGLINE } from '@/lib/constants'
+import { GlowAbstract } from '@/components/shared/GlowAbstract'
 
 interface FinalCTAProps {
   heading?: string
@@ -29,17 +30,13 @@ export function FinalCTA({
 
   return (
     <section
-      className="py-24 relative overflow-hidden"
+      className="py-24 bg-securenext-navy relative overflow-hidden"
       aria-labelledby="final-cta-heading"
     >
-      {/* Background decorative glows */}
-      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-        <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-securenext-accent opacity-[0.12] blur-3xl" />
-        <div className="absolute top-1/2 right-1/4 translate-x-1/2 -translate-y-1/2 w-72 h-72 rounded-full bg-securenext-accent opacity-[0.07] blur-3xl" />
-      </div>
+      <GlowAbstract variant="dense" />
 
-      {/* Glass panel */}
-      <div className="absolute inset-0" style={{ background: 'rgba(7, 26, 61, 0.40)', backdropFilter: 'blur(4px)', WebkitBackdropFilter: 'blur(4px)' }} aria-hidden="true" />
+      {/* Glass panel overlay */}
+      <div className="absolute inset-0" style={{ background: 'rgba(13, 34, 71, 0.30)' }} aria-hidden="true" />
 
       <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
         <motion.h2

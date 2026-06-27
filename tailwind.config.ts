@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'securenext-navy': '#0A2E6D',
-        'securenext-navy-dark': '#071A3D',
+        'securenext-navy': '#1a3e72',
+        'securenext-navy-dark': '#0d2247',
         'securenext-silver': '#8B8E95',
         'securenext-gray': '#F5F7FA',
         'securenext-white': '#FFFFFF',

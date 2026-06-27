@@ -49,8 +49,7 @@ export function TrustBar() {
 
   return (
     <section
-      className="border-b border-white/10 py-6"
-      style={{ background: 'rgba(7, 26, 61, 0.60)', backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)' }}
+      className="border-b border-gray-100 py-6 bg-white"
       aria-label="Trust indicators"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -64,14 +63,14 @@ export function TrustBar() {
               viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.4, delay: index * 0.1, ease: 'easeOut' }}
             >
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-securenext-accent/20">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-securenext-accent/10">
                 <badge.icon className="h-5 w-5 text-securenext-accent" aria-hidden="true" />
               </div>
-              <p className="text-xs font-semibold text-white leading-tight">
+              <p className="text-xs font-semibold text-securenext-navy leading-tight">
                 {badge.label}
               </p>
               {badge.sublabel && !badge.sublabel.includes('NEEDS') && (
-                <p className="text-xs text-white/60 leading-tight">{badge.sublabel}</p>
+                <p className="text-xs text-gray-400 leading-tight">{badge.sublabel}</p>
               )}
             </motion.div>
           ))}

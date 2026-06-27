@@ -3,6 +3,7 @@
 import React from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import { ClipboardList, BarChart2, ShieldCheck, Eye, TrendingUp } from 'lucide-react'
+import { GlowAbstract } from '@/components/shared/GlowAbstract'
 
 /**
  * Animation spec 6.4 — Process Timeline
@@ -47,10 +48,12 @@ export function ProcessTimeline() {
 
   return (
     <section
-      className="py-20 bg-securenext-navy overflow-hidden"
+      className="py-20 bg-securenext-navy relative overflow-hidden"
       aria-labelledby="process-heading"
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <GlowAbstract variant="subtle" />
+
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2
             id="process-heading"

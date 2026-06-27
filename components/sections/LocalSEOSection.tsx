@@ -3,6 +3,7 @@
 import React from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import { MapPin } from 'lucide-react'
+import { GlowAbstract } from '@/components/shared/GlowAbstract'
 
 const counties = [
   {
@@ -37,10 +38,12 @@ export function LocalSEOSection() {
 
   return (
     <section
-      className="py-20"
+      className="py-20 bg-securenext-navy relative overflow-hidden"
       aria-labelledby="local-seo-heading"
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <GlowAbstract variant="dense" />
+
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-12"
           initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
@@ -81,8 +84,8 @@ export function LocalSEOSection() {
 
           {/* Local value prop */}
           <motion.div
-            className="glass-card p-6 border-securenext-accent/30"
-            style={{ background: 'rgba(29, 123, 255, 0.10)' }}
+            className="glass-card p-6"
+            style={{ background: 'rgba(29, 123, 255, 0.12)', borderColor: 'rgba(29, 123, 255, 0.30)' }}
             initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
             whileInView={prefersReducedMotion ? {} : { opacity: 1, y: 0 }}
             viewport={{ once: true }}

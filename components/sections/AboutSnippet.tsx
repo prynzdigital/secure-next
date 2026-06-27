@@ -28,7 +28,7 @@ export function AboutSnippet() {
   const prefersReducedMotion = useReducedMotion()
 
   return (
-    <section className="py-20" aria-labelledby="about-snippet-heading">
+    <section className="py-20 bg-gray-50" aria-labelledby="about-snippet-heading">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
@@ -44,17 +44,17 @@ export function AboutSnippet() {
             </p>
             <h2
               id="about-snippet-heading"
-              className="text-3xl sm:text-4xl font-bold text-white mb-5"
+              className="text-3xl sm:text-4xl font-bold text-securenext-navy mb-5"
             >
               A Chicago Cybersecurity Firm Built to Protect Organizations Like Yours
             </h2>
-            <p className="text-white/70 leading-relaxed mb-5">
+            <p className="text-gray-600 leading-relaxed mb-5">
               SecureNext Networks & Cyber Defense Solutions LLC was founded on a straightforward observation:
               most small and mid-sized organizations in Chicago cannot afford a full-time Chief Information
               Security Officer, but they have the same compliance obligations, the same threat exposure, and
               the same need for a documented security program that larger organizations do.
             </p>
-            <p className="text-white/70 leading-relaxed mb-8">
+            <p className="text-gray-600 leading-relaxed mb-8">
               We exist to fill that gap — providing security expertise, compliance program development,
               and ongoing security capability that organizations can rely on without hiring it full-time.
             </p>
@@ -71,18 +71,18 @@ export function AboutSnippet() {
             {trustBlocks.map((block, index) => (
               <motion.div
                 key={block.title}
-                className="glass-card flex gap-4 p-5"
+                className="flex gap-4 p-5 bg-white rounded-xl border border-gray-100 shadow-sm"
                 initial={prefersReducedMotion ? {} : { opacity: 0, x: 24 }}
                 whileInView={prefersReducedMotion ? {} : { opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.12 }}
               >
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-securenext-accent/20 text-securenext-accent">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-securenext-accent/10 text-securenext-accent">
                   <block.icon className="h-5 w-5" aria-hidden="true" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-white mb-1">{block.title}</h3>
-                  <p className="text-sm text-white/70 leading-relaxed">{block.body}</p>
+                  <h3 className="font-semibold text-securenext-navy mb-1">{block.title}</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">{block.body}</p>
                 </div>
               </motion.div>
             ))}
