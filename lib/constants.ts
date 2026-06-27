@@ -6,8 +6,7 @@ export const SITE_DESCRIPTION =
   "Chicago's cybersecurity specialists. We protect businesses, healthcare orgs, and governments from cyber threats. Request a free assessment today."
 
 export const CONTACT_PHONE = '(312) 998-2114'
-// [NEEDS CLIENT INPUT: confirm email address]
-export const CONTACT_EMAIL = '[NEEDS CLIENT INPUT: email address]'
+export const CONTACT_EMAIL = 'info@securenextnetworks.com'
 export const CONTACT_ADDRESS = '1133 E 83rd Street Unit 113'
 export const CONTACT_CITY = 'Chicago'
 export const CONTACT_STATE = 'IL'

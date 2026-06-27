@@ -120,7 +120,7 @@ export default async function ServicePage({ params }: Props) {
       <section className="py-16 bg-white" aria-labelledby="overview-heading">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <h2 id="overview-heading" className="text-2xl font-bold text-securenext-navy mb-6">Overview</h2>
-          <div className="prose-securenext">
+          <div className="prose-light">
             {service.overview.split('\n\n').map((para, i) => (
               <p key={i} className="text-gray-700 leading-relaxed mb-5 text-[17px]">{para}</p>
             ))}
