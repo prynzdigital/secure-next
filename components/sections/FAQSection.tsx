@@ -23,7 +23,6 @@ interface FAQSectionProps {
   items: FAQItem[]
   heading?: string
   subheading?: string
-  dark?: boolean
   headingId?: string
 }
 
@@ -31,7 +30,6 @@ export function FAQSection({
   items,
   heading = 'Frequently Asked Questions',
   subheading,
-  dark = false,
   headingId,
 }: FAQSectionProps) {
   // Only render aria-labelledby when a heading is actually shown
