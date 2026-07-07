@@ -84,7 +84,7 @@ export default function AboutPage() {
             <div className="flex justify-center lg:justify-end">
               <div className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden shadow-xl shadow-securenext-navy/20">
                 <Image
-                  src="/images/founder.jpg"
+                  src="/images/founder.jpeg"
                   alt="SecureNext founder"
                   fill
                   className="object-cover object-top"
