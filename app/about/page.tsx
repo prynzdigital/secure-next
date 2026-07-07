@@ -79,15 +79,15 @@ export default function AboutPage() {
       {/* Our Story */}
       <section className="py-16 bg-white" aria-labelledby="story-heading">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-12 items-center">
             {/* Photo */}
-            <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden shadow-xl shadow-securenext-navy/20">
+            <div className="relative w-full aspect-square rounded-2xl overflow-hidden shadow-xl shadow-securenext-navy/20">
               <Image
                 src="/images/founder.jpeg"
                 alt="SecureNext founder"
                 fill
                 className="object-cover object-top"
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                sizes="(max-width: 1024px) 100vw, 40vw"
                 priority
               />
             </div>
