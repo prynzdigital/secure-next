@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { CheckCircle } from 'lucide-react'
 import { SITE_URL } from '@/lib/constants'
 import { breadcrumbSchema } from '@/lib/schema'
@@ -77,26 +78,44 @@ export default function AboutPage() {
 
       {/* Our Story */}
       <section className="py-16 bg-white" aria-labelledby="story-heading">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <h2 id="story-heading" className="text-3xl font-bold text-securenext-navy mb-6">Our Story</h2>
-          <div className="prose-light">
-            <p className="text-gray-700 leading-relaxed mb-5 text-[17px]">
-              SecureNext Networks & Cyber Defense Solutions LLC was founded on a straightforward observation:
-              most small and mid-sized organizations in Chicago cannot afford a full-time Chief Information
-              Security Officer, but they have the same compliance obligations, the same threat exposure, and
-              the same need for a documented security program that larger organizations do.
-            </p>
-            <p className="text-gray-700 leading-relaxed mb-5 text-[17px]">
-              The Chicago market is filled with IT support firms that have added cybersecurity to their
-              service menus as demand has grown. The result is a market where organizations seeking
-              security expertise may be working with generalists who lack the specialized knowledge that
-              HIPAA risk analysis, CMMC readiness, penetration testing, and incident response require.
-            </p>
-            <p className="text-gray-700 leading-relaxed text-[17px]">
-              SecureNext was built as a security-first firm. Every engagement is led by security specialists.
-              Every deliverable is written to produce a genuine security improvement — not to generate
-              a compliance checkbox or a vendor relationship.
-            </p>
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Photo */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden shadow-xl shadow-securenext-navy/20">
+                <Image
+                  src="/images/founder.jpg"
+                  alt="SecureNext founder"
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 1024px) 320px, 384px"
+                  priority
+                />
+              </div>
+            </div>
+            {/* Text */}
+            <div>
+              <h2 id="story-heading" className="text-3xl font-bold text-securenext-navy mb-6">Our Story</h2>
+              <div className="prose-light">
+                <p className="text-gray-700 leading-relaxed mb-5 text-[17px]">
+                  SecureNext Networks & Cyber Defense Solutions LLC was founded on a straightforward observation:
+                  most small and mid-sized organizations in Chicago cannot afford a full-time Chief Information
+                  Security Officer, but they have the same compliance obligations, the same threat exposure, and
+                  the same need for a documented security program that larger organizations do.
+                </p>
+                <p className="text-gray-700 leading-relaxed mb-5 text-[17px]">
+                  The Chicago market is filled with IT support firms that have added cybersecurity to their
+                  service menus as demand has grown. The result is a market where organizations seeking
+                  security expertise may be working with generalists who lack the specialized knowledge that
+                  HIPAA risk analysis, CMMC readiness, penetration testing, and incident response require.
+                </p>
+                <p className="text-gray-700 leading-relaxed text-[17px]">
+                  SecureNext was built as a security-first firm. Every engagement is led by security specialists.
+                  Every deliverable is written to produce a genuine security improvement — not to generate
+                  a compliance checkbox or a vendor relationship.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
