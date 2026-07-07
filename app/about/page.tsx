@@ -160,36 +160,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Leadership — placeholders */}
-      <section className="py-16 bg-securenext-gray" aria-labelledby="leadership-heading">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 id="leadership-heading" className="text-3xl font-bold text-securenext-navy mb-4">
-            Leadership Team
-          </h2>
-          <p className="text-gray-600 mb-8">
-            {/* [NEEDS CLIENT INPUT: leadership bios, photos, certifications] */}
-            SecureNext&apos;s leadership team brings decades of combined experience across cybersecurity consulting, network security, and compliance program development for Chicago-area organizations.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { name: '[NEEDS CLIENT INPUT: Name]', title: '[NEEDS CLIENT INPUT: Title]', bio: '[NEEDS CLIENT INPUT: Bio]' },
-              { name: '[NEEDS CLIENT INPUT: Name]', title: '[NEEDS CLIENT INPUT: Title]', bio: '[NEEDS CLIENT INPUT: Bio]' },
-            ].map((person, i) => (
-              <div key={i} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                {/* Temporary placeholder — replace with <Image> when client provides photos */}
-                <div
-                  className="h-20 w-20 rounded-full bg-securenext-gray mb-4 flex items-center justify-center text-securenext-silver text-xs"
-                  aria-hidden="true"
-                />
-                <h3 className="font-semibold text-securenext-navy">{person.name}</h3>
-                <p className="text-sm text-securenext-accent mb-3">{person.title}</p>
-                <p className="text-sm text-gray-600">{person.bio}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Credentials */}
       <section className="py-16 bg-white" aria-labelledby="credentials-heading">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
