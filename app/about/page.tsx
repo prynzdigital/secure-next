@@ -160,30 +160,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Credentials */}
-      <section className="py-16 bg-white" aria-labelledby="credentials-heading">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 id="credentials-heading" className="text-3xl font-bold text-securenext-navy mb-6">
-            Credentials &amp; Compliance Expertise
-          </h2>
-          {/* [NEEDS CLIENT INPUT: specific certifications (CISSP, CISM, CEH, OSCP, etc.)] */}
-          <p className="text-gray-600 mb-8">
-            SecureNext team members hold industry certifications across cybersecurity, compliance, and network security disciplines.
-            <span className="text-securenext-accent font-medium"> [NEEDS CLIENT INPUT: list specific certifications]</span>
-          </p>
-          <div className="flex flex-wrap gap-3">
-            {['HIPAA', 'NIST CSF', 'CMMC', 'PCI-DSS', 'SOC 2'].map((fw) => (
-              <span
-                key={fw}
-                className="inline-block px-4 py-2 bg-securenext-gray rounded-full text-sm font-semibold text-securenext-navy border border-securenext-navy/15"
-              >
-                {fw}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <FinalCTA />
     </>
   )
